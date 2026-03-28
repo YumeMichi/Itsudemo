@@ -82,5 +82,9 @@ if(ITSUDEMO_BUILD_PROGRAM)
 		src/Itsudemo.cpp
 		"${CMAKE_CURRENT_BINARY_DIR}/Info.rc"
 	)
+	target_include_directories(Itsudemo PRIVATE
+		"${CMAKE_CURRENT_BINARY_DIR}"
+		tclap-1.2.1
+	)
 	target_link_libraries(Itsudemo PRIVATE lodepng libtexb)
 endif()
